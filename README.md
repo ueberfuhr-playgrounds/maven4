@@ -1,5 +1,7 @@
 # Maven 4 - What's New
 
+[![Java CI with Maven 4 RC 5](https://github.com/ueberfuhr-playgrounds/maven4/actions/workflows/maven.yml/badge.svg)](https://github.com/ueberfuhr-playgrounds/maven4/actions/workflows/maven.yml)
+
 > [!IMPORTANT]
 > This repository was tested with the Maven 4 Release Candidate (RC5).
 > Things might change until the final release.
