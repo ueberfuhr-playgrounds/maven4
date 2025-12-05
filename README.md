@@ -14,6 +14,9 @@
 >   -b concurrent
 > ```
 
+> [!NOTE]  
+> There's also a polyglot version in the `polyglot-pom` branch using the [Mason Extension](https://github.com/maveniverse/mason).
+
 Now let's find out what's new:
 
 ---
