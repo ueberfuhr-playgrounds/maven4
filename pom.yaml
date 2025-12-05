@@ -1,0 +1,49 @@
+modelVersion: 4.1.0
+root: true
+
+groupId: com.samples
+artifactId: maven4-samples
+version: 1.0-SNAPSHOT
+packaging: pom
+
+properties:
+  project.build.sourceEncoding: "UTF-8"
+  maven.compiler.source: "17"
+  maven.compiler.target: "17"
+  junit-bom.version: "5.13.4"
+  log4j-core.version: "2.24.3"
+  lombok.version: "1.18.42"
+  maven-compiler-plugin.version: "4.0.0-beta-3"
+  maven-install-plugin.version: "4.0.0-beta-2"
+
+dependencyManagement:
+  dependencies:
+    - "org.junit:junit-bom:${junit-bom.version}:bom@import"
+    - "org.apache.logging.log4j:log4j-core:${log4j-core.version}"
+    - "org.projectlombok:lombok:${lombok.version}@provided"
+
+dependencies:
+  - "org.projectlombok:lombok:${lombok.version}:classpath-processor"
+
+build:
+  pluginManagement:
+    plugins:
+      - "org.apache.maven.plugins:maven-compiler-plugin:${maven-compiler-plugin.version}"
+      - "org.apache.maven.plugins:maven-install-plugin:${maven-install-plugin.version}"
+
+  plugins:
+    - id: "org.apache.maven.plugins:maven-antrun-plugin:3.2.0"
+      executions:
+        - id: log-message
+          phase: each
+          goals:
+            - run
+          configuration:
+            target:
+              echo:
+                message: "Hello, BEFORE EACH!"
+profiles:
+  - id: conditional-profile
+    activation:
+      condition: >
+        exists('${project.basedir}/src/**/*.xsd') && length(${user.name}) > 5
