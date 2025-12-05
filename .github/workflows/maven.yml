@@ -23,7 +23,7 @@ jobs:
         run: |
           wget https://dlcdn.apache.org/maven/maven-4/4.0.0-rc-5/binaries/apache-maven-4.0.0-rc-5-bin.zip
           unzip -q apache-maven-4.0.0-rc-5-bin.zip
-          echo "::add-path::${{ github.workspace }}/apache-maven-4.0.0-rc-5/bin"
+          echo "${{ github.workspace }}/apache-maven-4.0.0-rc-5/bin" >> $GITHUB_PATH
 
       - name: Build with Maven 4
         run: mvn -B clean install -Dmaven.consumer.pom.flatten=true -b concurrent
