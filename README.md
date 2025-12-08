@@ -15,7 +15,7 @@
 > ```
 
 > [!NOTE]  
-> There's also a polyglot version in the `polyglot-pom` branch using the [Mason Extension](https://github.com/maveniverse/mason).
+> There's also a polyglot version in the `polyglot-pom` branch using the [Mason Extension](https://github.com/maveniverse/mason). Unfortunately, it does not work because of an open [Mason Issue](https://github.com/maveniverse/mason/issues/35).
 
 Now let's find out what's new:
 
