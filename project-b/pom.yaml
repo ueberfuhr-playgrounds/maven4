@@ -1,5 +1,6 @@
 modelVersion: 4.1.0
-parent:
+# should be empty (https://github.com/maveniverse/mason/pull/36)
+parent: com.samples:maven4-samples:1.0-SNAPSHOT
 id: com.samples.maven4-samples:project-b
 packaging: jar
 dependencies:
