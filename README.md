@@ -3,8 +3,8 @@
 [![Java CI with Maven 4 RC 5](https://github.com/ueberfuhr-playgrounds/maven4/actions/workflows/maven.yml/badge.svg)](https://github.com/ueberfuhr-playgrounds/maven4/actions/workflows/maven.yml)
 
 > [!IMPORTANT]
-> This repository was tested with the Maven 4 Release Candidate (RC5).
-> Things might change until the final release.
+> In this repository, we rely on Maven 4 RC5 as our reference version. At the time of writing, the Apache Maven project has not announced a final GA release date for Maven 4. Because of that, we base all examples and explanations on the most recent release candidate available.
+> We need to declare the `4.x` beta versions of the default plugins (esp. `maven-compiler-plugin`, `maven-install-plugin` and `maven-deploy-plugin`) explicitly, because the RC does not provide them as default versions.
 
 > [!NOTE]  
 > This repository contains a simple multi-project setup. To build it, just download Maven4 and invoke

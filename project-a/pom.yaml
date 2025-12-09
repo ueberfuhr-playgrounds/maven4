@@ -1,0 +1,8 @@
+modelVersion: 4.1.0
+# should be empty (https://github.com/maveniverse/mason/pull/36)
+parent: com.samples:maven4-samples:1.0-SNAPSHOT
+id: com.samples.maven4-samples:project-a
+packaging: jar
+dependencies:
+  - org.junit.jupiter:junit-jupiter-engine@test
+  - org.apache.logging.log4j:log4j-core
